@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="verdana" size="2">
             <div id="news-updates-section">
-                <marquee behavior="scroll" direction="up" scrollamount="2" style="height: 100px;">
+                <marquee behavior="scroll" direction="up" scrollamount="2" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!
                 </marquee>

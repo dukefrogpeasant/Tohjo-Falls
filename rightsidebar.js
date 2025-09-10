@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <table width="139"><tr>
         <td id="affiliates-section" width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
             <a href="https://tohjo-falls.neocities.org/">
-                <img src="./Visual/header/tfaffiliate.png" alt="The Tohjo Falls">
+                <img src="./Visual/affiliateimg/tfaffiliate.png" alt="The Tohjo Falls">
             </a><br>
             <a href="http://angelfire.com/anime4/animefanime">
-                <img src="./Visual/header/animefanime.gif" border="0">
+                <img src="./Visual/affiliateimg/animefanime.gif" border="0">
             </a>
             <a href="https://angelfire.com/pokemon2/pkmnjourney/linktous.html">
-                <img src="./Visual/header/pokejourneyani.gif" border="0">
+                <img src="./Visual/affiliateimg/pokejourneyani.gif" border="0">
             </a>
         </td>
         </tr></table>

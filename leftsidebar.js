@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="main.html">Home</a><br>
         &nbsp;<a href="network">Network</a><br>
         &nbsp;<a href="index.html">Splash Page</a><br>
-        &nbsp;<a href="affiliation.html">Affiliation</a><br>
+        &nbsp;<a href="fanart.html">Fan Art</a><br>
         &nbsp;<a href="staff.html">Staff</a><br>
         &nbsp;<a href="joinstaff.html">Join the Staff</a><br>
         &nbsp;<a href="awards.html">Awards</a><br>
@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="avatars.html">Avatars</a><br>
         &nbsp;<a href="pikachu.html">Virtual Pikachu</a><br>
         &nbsp;<a href="diglett.html">Diglett Bash</a><br>
+        &nbsp;<a href="archivedpages.html">Archived Pages</a><br>
         </font>
         </td></tr></table>
         <img src="./Visual/navbar/webmasters.PNG"><br>

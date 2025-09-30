@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/affiliates.PNG"><br>
+        <img src="./Visual/navbar/affiliates.png"><br>
         <table width="139"><tr>
         <td id="affiliates-section" width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
             <a href="https://tohjo.neocities.org/">
@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
         </td>
         </tr></table>
-        <img src="./Visual/navbar/topsites.PNG"><br>
+        <img src="./Visual/navbar/topsites.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="verdana" size="2">
             &nbsp;<a href="not_found.html">I have no topsites yet!</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/networks.PNG"><br>
+        <img src="./Visual/navbar/networks.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="verdana" size="2">
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/stats.PNG"><br>
+        <img src="./Visual/navbar/stats.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="verdana" size="2">

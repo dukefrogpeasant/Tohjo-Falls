@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!sidebar) return;
     sidebar.innerHTML = `
     <center>
-        <img src="./Visual/navbar/main.PNG"><br>
+        <img src="Visual/navbar/main.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="credits.html">Credits</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/gameboy.PNG"><br>
+        <img src="Visual/navbar/gameboy.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="dash.html">Dash</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/n64.PNG"><br>
+        <img src="Visual/navbar/n64.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="stadium2.html">Stadium 2</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/gamecube.PNG"><br>
+        <img src="Visual/navbar/gamecube.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="colosseum.html">Colosseum</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/tv.PNG"><br>
+        <img src="Visual/navbar/tv.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="season6.html">Advanced</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/movies.PNG"><br>
+        <img src="Visual/navbar/movies.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="movie4.html">Pokémon 4 Ever</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/other.PNG"><br>
+        <img src="Visual/navbar/other.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="archivedpages.html">Archived Pages</a><br>
         </font>
         </td></tr></table>
-        <img src="./Visual/navbar/webmasters.PNG"><br>
+        <img src="Visual/navbar/webmasters.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">

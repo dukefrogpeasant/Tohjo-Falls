@@ -49,16 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="verdana" size="2">
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
-            &nbsp;<a href="index.html">Home</a><br>
+            Hit Counter:<br>
+            <div align=center><a href='https://www.counter12.com'><img src='https://www.counter12.com/img-Ba0ZBwZyW3Wba649-29.gif' border='0' alt='web counter free'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=Ba0ZBwZyW3Wba649'></script></div>
         </font>
         </td></tr></table>
         <br>

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
         &nbsp;<a href="main.html">Home</a><br>
-        &nbsp;<a href="network">Network</a><br>
+        &nbsp;<a href="network.html">Network</a><br>
         &nbsp;<a href="index.html">Splash Page</a><br>
         &nbsp;<a href="fanart.html">Fan Art</a><br>
         &nbsp;<a href="staff.html">Staff</a><br>
@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <font face="tahoma" size="2">
         &nbsp;<a href="hangman.html">Hangman</a><br>
         &nbsp;<a href="psyduck.html">Psyduck</a><br>
-        &nbsp;<a href="avatars.html">Avatars</a><br>
         &nbsp;<a href="pikachu.html">Virtual Pikachu</a><br>
         &nbsp;<a href="diglett.html">Diglett Bash</a><br>
         &nbsp;<a href="archivedpages.html">Archived Pages</a><br>

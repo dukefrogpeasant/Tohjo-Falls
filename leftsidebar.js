@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="tahoma" size="2">
-        &nbsp;<a href="buttons.html">Buttons</a><br>
+        &nbsp;<a href="buttonhelp.html">Buttons</a><br>
         &nbsp;<a href="banners.html">Banners</a><br>
         &nbsp;<a href="layouts.html">Layouts</a><br>
         &nbsp;<a href="splash.html">Splash Pics</a><br>

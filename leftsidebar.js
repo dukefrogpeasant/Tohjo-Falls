@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="linktf.html">Link To TF</a><br>
         &nbsp;<a href="links.html">Pokémon Links</a><br>
         &nbsp;<a href="credits.html">Credits</a><br>
+        &nbsp;<a href="https://tohjo.atabook.org/?page=1">Guestbook</a><br>
         </font>
         </td></tr></table>
         <img src="Visual/navbar/gameboy.png"><br>

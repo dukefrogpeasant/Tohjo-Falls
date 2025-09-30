@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="awards.html">Awards</a><br>
         &nbsp;<a href="linktf.html">Link To TF</a><br>
         &nbsp;<a href="links.html">Pokémon Links</a><br>
-        &nbsp;<a href="disclaimer.html">Disclaimer</a><br>
+        &nbsp;<a href="credits.html">Credits</a><br>
         </font>
         </td></tr></table>
         <img src="./Visual/navbar/gameboy.PNG"><br>

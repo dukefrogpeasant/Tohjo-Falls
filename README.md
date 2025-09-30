@@ -15,3 +15,4 @@ Permission was granted by Onelani to use the art they made for MJPtheMaster back
 Most image content has been taken from sites that are either defunct(wayback) or from geocities.ws and Serebii.
 
 Descriptions from Serebii, used in the anime sections of this site, have been given permission to continue to be used.
+Chansey affiliate button and Tohjo Network button by lcorpofficial on Discord.

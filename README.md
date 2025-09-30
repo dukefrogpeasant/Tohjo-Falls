@@ -9,3 +9,9 @@ This site is going to be relaunched WITH the permission of Raichu, one of the or
 Original site Tohjo Falls ©️ 2001, 2003, 2005, by Matt and Raichu.
 
 Re-launch of the site was permitted by Raichu via private E-mail.
+
+Permission was granted by Onelani to use the art they made for MJPtheMaster back in 2001 via BlueSky.
+
+Most image content has been taken from sites that are either defunct(wayback) or from geocities.ws and Serebii.
+
+Descriptions from Serebii, used in the anime sections of this site, have been given permission to continue to be used.

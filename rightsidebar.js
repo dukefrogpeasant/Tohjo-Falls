@@ -22,10 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="./Visual/affiliateimg/myown/tfaffiliate.png" alt="The Tohjo Falls">
             </a><br>
             <a href="http://angelfire.com/anime4/animefanime">
-                <img src="./Visual/affiliateimg/animefanime.gif" alt="Anime Fanime" border="0">
+                <img src="./Visual/affiliateimg/others/animefanime.gif" alt="Anime Fanime" border="0">
             </a>
             <a href="https://angelfire.com/pokemon2/pkmnjourney/linktous.html">
-                <img src="./Visual/affiliateimg/pokejourneyani.gif" alt="Pokejourney" border="0">
+                <img src="./Visual/affiliateimg/others/pokejourneyani.gif" alt="Pokejourney" border="0">
+            </a>
+            <a href="https://boxprophet.org/">
+                <img src="./Visual/affiliateimg/others/boxprophet.png" alt="Box Prophet" border="0">
             </a>
         </td>
         </tr></table>

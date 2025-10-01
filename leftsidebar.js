@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="joinstaff.html">Join the Staff</a><br>
         &nbsp;<a href="awards.html">Awards</a><br>
         &nbsp;<a href="linktf.html">Link To TF</a><br>
+        &nbsp;<a href="affiliateme.html">Affiliation</a><br>
         &nbsp;<a href="links.html">Pokémon Links</a><br>
         &nbsp;<a href="credits.html">Credits</a><br>
         &nbsp;<a href="https://tohjo.atabook.org/?page=1">Guestbook</a><br>

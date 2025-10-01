@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div id="news-updates-section">
                 <marquee behavior="scroll" direction="up" scrollamount="3" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
-                    Welcome to Tohjo Falls!
+                    Welcome to Tohjo Falls!<br><br>
+                    We just launched! Pokémon Legends Z-A releases October 16, 2025!
                 </marquee>
             </div>
         </font>

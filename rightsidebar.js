@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
         <font face="verdana" size="2">
-            <a href="https://tohjo.neocities.org/network.html">
+            <a href="network.html">
                 <img src="./Visual/network/tfnetwork.png" alt="The Tohjo Falls">
             </a><br>
         </font>

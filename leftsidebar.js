@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="movie2.html">Pokémon 2000</a><br>
         &nbsp;<a href="movie3.html">Spell of the Unown</a><br>
         &nbsp;<a href="movie4.html">Pokémon 4 Ever</a><br>
+        &nbsp;<a href="movie6.html">Destiny Deoxys</a><br>
         </font>
         </td></tr></table>
         <img src="Visual/navbar/other.png"><br>

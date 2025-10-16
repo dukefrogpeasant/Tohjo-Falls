@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="emerald.html">Emerald</a><br>
         &nbsp;<a href="dp.html">Diamond/Pearl</a><br>
         &nbsp;<a href="dash.html">Dash</a><br>
+        &nbsp;<a href="plza.html">Legends Z-A</a><br>
         </font>
         </td></tr></table>
         <img src="Visual/navbar/n64.png"><br>

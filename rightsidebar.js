@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <marquee behavior="scroll" direction="up" scrollamount="3" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!<br><br>
-                    The FRLG and Pinball RS pages are up! <br><br> Pokémon Legends Z-A releases October 16, 2025!
+                    Pokémon Legends Z-A has released, we've <a href="plza">made a page for it!</a>
                 </marquee>
             </div>
         </font>

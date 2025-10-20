@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!<br><br>
                     Pokémon Legends Z-A has released, we've <a href="plza">made a page for it!</a>
+                    We reached over 1000 hits this month(october)!!
                 </marquee>
             </div>
         </font>

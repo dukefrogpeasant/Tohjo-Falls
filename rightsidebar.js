@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="https://boxprophet.org/">
                 <img src="./Visual/affiliateimg/others/boxprophet.png" alt="Box Prophet" border="0">
             </a>
+            <a href="https://mewheart.neocities.org/">
+                <img src="./Visual/affiliateimg/others/mewheart.png" alt="MewHeart" border="0">
+            </a>
         </td>
         </tr></table>
         <img src="./Visual/navbar/topsites.png"><br>

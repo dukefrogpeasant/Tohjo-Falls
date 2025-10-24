@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="psyduck.html">Psyduck</a><br>
         &nbsp;<a href="pikachu.html">Virtual Pikachu</a><br>
         &nbsp;<a href="diglett.html">Diglett Bash</a><br>
+        &nbsp;<a href="polls.html">Polls</a><br>
         &nbsp;<a href="archivedpages.html">Archived Pages</a><br>
         </font>
         </td></tr></table>

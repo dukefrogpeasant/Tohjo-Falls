@@ -1,0 +1,30 @@
+body {
+    scrollbar-arrow-color: #FFFFFF;
+    scrollbar-base-color: #9C97EB;
+    scrollbar-face-color: #9C97EB;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-shadow-color: #000000;
+    /*scrollbar-3d-light-color: #000000; FIGURE OUT WHAT THIS DOES?*/
+    scrollbar-track-color: #9C97EBFF;
+    /*scrollbar-dark-shadow-color: #FFFFFF; FIGURE OUT WHAT THIS DOES?*/
+}
+
+A:link {
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+
+A:visited {
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+
+A:active {
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+
+A:hover {
+    COLOR: gray;
+    TEXT-DECORATION: none
+}

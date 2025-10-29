@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function preloadAssets() {
         // adjust filetype if needed
         assetLoadPromises.push(loadImage("Diglett/hole.gif").then(img => assets.hole = img));
-        assetLoadPromises.push(loadImage("Diglett/gopher1.gif").then(img => assets.gopherPics[0] = img));
-        assetLoadPromises.push(loadImage("Diglett/gopher2.gif").then(img => assets.gopherPics[1] = img));
-        assetLoadPromises.push(loadImage("Diglett/gopher3.gif").then(img => assets.gopherPics[2] = img));
-        assetLoadPromises.push(loadImage("Diglett/hole.gif").then(img => assets.gopherPics[3] = img)); // final frame
+        assetLoadPromises.push(loadImage("Diglett/diglett1.png").then(img => assets.gopherPics[0] = img));
+        assetLoadPromises.push(loadImage("Diglett/diglett2.png").then(img => assets.gopherPics[1] = img));
+        assetLoadPromises.push(loadImage("Diglett/diglett3.png").then(img => assets.gopherPics[2] = img));
+        assetLoadPromises.push(loadImage("Diglett/hole.png").then(img => assets.gopherPics[3] = img)); // final frame
         assetLoadPromises.push(loadImage("Diglett/hurt1.gif").then(img => assets.gopherHurt[0] = img));
         assetLoadPromises.push(loadImage("Diglett/hurt2.gif").then(img => assets.gopherHurt[1] = img));
         assetLoadPromises.push(loadImage("Diglett/hurt3.gif").then(img => assets.gopherHurt[2] = img));

@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.width = width;
     canvas.height = height;
 
+    // optional background color: set via <canvas data-bg="#0a0"> or change here
+    const bgColor = (canvas.dataset && canvas.dataset.bg) ? canvas.dataset.bg : null;
+
     let score = 0, level = 1, tries = 5;
     let maxScorePerLevel = 100, maxLevel = 6;
     const levelDelays = [1200, 1000, 900, 800, 700, 650];
@@ -51,22 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Try to load assets used by the Java applet; if they don't exist, fall back
     function preloadAssets() {
         // adjust filetype if needed
-        assetLoadPromises.push(loadImage("Diglett/hole.gif").then(img => assets.hole = img));
+        assetLoadPromises.push(loadImage("Diglett/hole.gif").then(img => assets.hole = img)); //startframe diglet
         assetLoadPromises.push(loadImage("Diglett/diglett1.png").then(img => assets.gopherPics[0] = img));
-        assetLoadPromises.push(loadImage("Diglett/diglett2.png").then(img => assets.gopherPics[1] = img));
+        assetLoadPromises.push(loadImage("Diglett/diglett2.png").then(img => assets.gopherPics[1] = img)); 
         assetLoadPromises.push(loadImage("Diglett/diglett3.png").then(img => assets.gopherPics[2] = img));
         assetLoadPromises.push(loadImage("Diglett/hole.png").then(img => assets.gopherPics[3] = img)); // final frame
-        assetLoadPromises.push(loadImage("Diglett/hurt1.gif").then(img => assets.gopherHurt[0] = img));
-        assetLoadPromises.push(loadImage("Diglett/hurt2.gif").then(img => assets.gopherHurt[1] = img));
-        assetLoadPromises.push(loadImage("Diglett/hurt3.gif").then(img => assets.gopherHurt[2] = img));
-        assetLoadPromises.push(loadImage("Diglett/hole.gif").then(img => assets.gopherHurt[3] = img));
-        assetLoadPromises.push(loadImage("Diglett/ss.jpg").then(img => assets.startStop = img));
+        assetLoadPromises.push(loadImage("Diglett/hurt1.png").then(img => assets.gopherHurt[0] = img));
+        assetLoadPromises.push(loadImage("Diglett/hurt2.png").then(img => assets.gopherHurt[1] = img));
+        assetLoadPromises.push(loadImage("Diglett/hurt3.png").then(img => assets.gopherHurt[2] = img));
+        assetLoadPromises.push(loadImage("Diglett/holeft.png").then(img => assets.gopherHurt[3] = img)); 
+        assetLoadPromises.push(loadImage("Diglett/ss.jpg").then(img => assets.startStop = img)); //start stop button
         // sounds same as above adjust filetype if need be
-        assetLoadPromises.push(loadAudio("Diglett/ow.au").then(a => assets.sounds.ouch = a));
-        assetLoadPromises.push(loadAudio("Diglett/bang.au").then(a => assets.sounds.bang = a));
-        assetLoadPromises.push(loadAudio("Diglett/gup.au").then(a => assets.sounds.gup = a));
-        assetLoadPromises.push(loadAudio("Diglett/gdown.au").then(a => assets.sounds.gdown = a));
-        assetLoadPromises.push(loadAudio("Diglett/laugh.au").then(a => assets.sounds.laugh = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/ow.au").then(a => assets.sounds.ouch = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/bang.au").then(a => assets.sounds.bang = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/gup.au").then(a => assets.sounds.gup = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/gdown.au").then(a => assets.sounds.gdown = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/laugh.au").then(a => assets.sounds.laugh = a));
 
         return Promise.all(assetLoadPromises).then(() => {
             imagesLoaded = !!(assets.hole || assets.gopherPics[0]);
@@ -76,7 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // grid and drawing helpers
     const cellSize = 100;
     function drawBoard() {
-        ctx.clearRect(0, 0, width, height);
+        // Paint optional background color (allows a green "grass" background)
+        if (bgColor) {
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+        } else {
+            ctx.clearRect(0, 0, width, height);
+        }
         // Draw 4x4 holes
         for (let y = 0; y < 4; y++) {
             for (let x = 0; x < 4; x++) {
@@ -143,6 +152,21 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (e) { /* ignore */ }
     }
 
+    // new helpers for overlay messages (game over / you win)
+    function showMessage(text, color = "yellow") {
+        const el = document.getElementById("game-message");
+        if (!el) return;
+        el.style.display = "flex";
+        el.style.color = color;
+        el.textContent = text;
+    }
+    function hideMessage() {
+        const el = document.getElementById("game-message");
+        if (!el) return;
+        el.style.display = "none";
+        el.textContent = "";
+    }
+
     // Sequence: gopherUp (frames), wait, gopherDown (frames) unless hit
     async function showGopher() {
         if (!keepGoing || !gameStart) return;
@@ -150,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ry = randomY();
         isHit = false;
         gopherVisible = true;
+        hideMessage(); // hide any overlay when a new gopher appears
 
         // animate up: use gopherPics frames 0..2 then frame 3 as fully up (if present)
         await gopherUp(rx, ry);
@@ -170,8 +195,9 @@ document.addEventListener("DOMContentLoaded", function () {
         drawBoard();
 
         if (keepGoing && gameStart) {
-            // small pause before next pop
-            gopherTimeout = setTimeout(showGopher, 200);
+            // centralize scheduling here and use a longer gap to avoid rapid successive spawns
+            clearTimeout(gopherTimeout);
+            gopherTimeout = setTimeout(showGopher, Math.max(600, delay + 300));
         }
     }
 
@@ -232,7 +258,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hurt animation
     async function gopherHit(hurtX, hurtY) {
+        // Ensure the gopher (current frame) is drawn during the hurt animation
         const frames = imagesLoaded && assets.gopherHurt.length ? assets.gopherHurt : null;
+        const prevVisible = gopherVisible;
+        gopherVisible = true;
         if (frames) {
             for (let i = 0; i < frames.length; i++) {
                 currentGopherFrameImg = frames[i];
@@ -248,13 +277,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 drawBoard();
             }
         }
+        // restore visibility state (normally we want the gopher to be gone after hit)
+        gopherVisible = false;
+        currentGopherFrameImg = null;
+        // leave prevVisible unused intentionally; callers control scheduling/next pop
     }
 
     function goodHit() {
-        // play hit sound
+        // play hit sound and ensure hurt animation plays before clearing state
         playSound(assets.sounds.bang);
         score += gopherPoints;
-        // animate hurt
+        // wait for hurt animation to finish (if goodHit is called)
+        // convert to promise flow so animation completes
         gopherHit(rx, ry);
         if (score >= maxScorePerLevel) {
             maxScorePerLevel += 100;
@@ -270,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gopherVisible = false;
         currentGopherFrameImg = null;
         drawBoard();
-        if (keepGoing && gameStart) setTimeout(showGopher, delay);
+        // removed duplicate scheduling; showGopher now schedules next spawn centrally
     }
 
     function badHit() {
@@ -285,13 +319,17 @@ document.addEventListener("DOMContentLoaded", function () {
         gopherVisible = false;
         currentGopherFrameImg = null;
         drawBoard();
-        if (keepGoing && gameStart) setTimeout(showGopher, delay);
+        // removed duplicate scheduling; showGopher now schedules next spawn centrally
     }
 
     function gameOver() {
         keepGoing = false;
         gameStart = false;
+        clearTimeout(gopherTimeout);
         drawBoard();
+        // ensure overlay is visible and readable
+        showMessage("GAME OVER! DIGLETTS RUINED YOUR YARD!", "yellow");
+        // also draw prominent canvas text for compatibility
         ctx.font = "30px Times New Roman";
         ctx.fillStyle = "yellow";
         ctx.fillText("DIGLETTS RUINED", 20, 150);
@@ -303,7 +341,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function youWin() {
         keepGoing = false;
         gameStart = false;
+        clearTimeout(gopherTimeout);
         drawBoard();
+        showMessage("YOU WIN!", "red");
         ctx.font = "30px Times New Roman";
         ctx.fillStyle = "red";
         ctx.fillText("YOU WIN!", 130, 210);
@@ -315,13 +355,14 @@ document.addEventListener("DOMContentLoaded", function () {
         maxScorePerLevel = 100;
         tries = 5;
         delay = levelDelays[0];
-        frameRate = 50;
+        frameRate = 30;
         isHit = false;
         keepGoing = true;
         gameStart = false;
         gopherVisible = false;
         currentGopherFrameImg = null;
         clearTimeout(gopherTimeout);
+        hideMessage(); // hide overlay on reset
         drawBoard();
     }
 
@@ -337,7 +378,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 keepGoing = true;
                 // ensure assets start loading (async)
                 preloadAssets().then(() => {
-                    setTimeout(showGopher, 1000);
+                    clearTimeout(gopherTimeout);
+                    // give a slightly longer delay before the first gopher
+                    gopherTimeout = setTimeout(showGopher, Math.max(800, delay + 500));
                 });
                 return;
             } else {
@@ -351,8 +394,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Hit gopher
         if (gameStart && gopherVisible && mouseX >= rx + 13 && mouseX <= rx + 87 && mouseY >= ry + 9 && mouseY <= ry + 73) {
             isHit = true;
-            // mark visible false to stop further down animation
-            gopherVisible = false;
+            // keep gopherVisible true so hurt frames render
             playSound(assets.sounds.ouch);
             // run hurt sequence then apply scoring
             gopherHit(rx, ry).then(() => {
@@ -371,7 +413,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 isHit = false;
                 currentGopherFrameImg = null;
                 drawBoard();
-                if (keepGoing && gameStart) setTimeout(showGopher, delay);
+                // schedule the next gopher, cancelling any pending timer first
+                clearTimeout(gopherTimeout);
+                gopherTimeout = setTimeout(showGopher, Math.max(600, delay + 300));
             });
         }
     });

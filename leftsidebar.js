@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="diglett.html">Diglett Bash</a><br>
         &nbsp;<a href="polls.html">Polls</a><br>
         &nbsp;<a href="archivedpages.html">Archived Pages</a><br>
+        &nbsp;<a href="milestones.html">Milestones</a><br>
         </font>
         </td></tr></table>
         <img src="Visual/navbar/webmasters.png"><br>

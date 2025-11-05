@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
         assetLoadPromises.push(loadImage("Diglett/holeft.png").then(img => assets.gopherHurt[3] = img)); 
         assetLoadPromises.push(loadImage("Diglett/ss.jpg").then(img => assets.startStop = img)); //start stop button
         // sounds same as above adjust filetype if need be
-        assetLoadPromises.push(loadAudio("Diglett/sound/ow.au").then(a => assets.sounds.ouch = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/bang.au").then(a => assets.sounds.bang = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/gup.au").then(a => assets.sounds.gup = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/gdown.au").then(a => assets.sounds.gdown = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/laugh.au").then(a => assets.sounds.laugh = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/ow.mp3").then(a => assets.sounds.ouch = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/bang.mp3").then(a => assets.sounds.bang = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/gup.mp3").then(a => assets.sounds.gup = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/gdown.mp3").then(a => assets.sounds.gdown = a));
+        assetLoadPromises.push(loadAudio("Diglett/sound/laugh.mp3").then(a => assets.sounds.laugh = a));
 
         return Promise.all(assetLoadPromises).then(() => {
             imagesLoaded = !!(assets.hole || assets.gopherPics[0]);
@@ -291,6 +291,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // convert to promise flow so animation completes
         gopherHit(rx, ry);
         if (score >= maxScorePerLevel) {
+            // Play level-up sound based on the exact score thresholds before changing level/thresholds
+            levelUpSound();
             maxScorePerLevel += 100;
             level++;
             if (level > maxLevel) {
@@ -336,6 +338,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.fillText("YOUR YARD!", 100, 200);
         ctx.fillText("GAME OVER", 100, 250);
         playSound(assets.sounds.laugh);
+        // disappear after 4 seconds
+        setTimeout(() => {
+            hideMessage();
+            drawBoard();
+        }, 4000);
     }
 
     function youWin() {
@@ -401,6 +408,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 score += gopherPoints;
                 // level progression logic (mirror Java)
                 if (score >= maxScorePerLevel) {
+                    // Play level-up sound before updating thresholds/level so score matches expected thresholds
+                    levelUpSound();
                     maxScorePerLevel += 100;
                     level++;
                     if (level > maxLevel) {
@@ -419,6 +428,13 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+
+    function levelUpSound() {
+        // play a special sound exactly when score hits one of these thresholds
+        if (score === 100 || score === 200 || score === 300 || score === 400 || score === 500) {
+            playSound(assets.sounds.bang);
+        }
+    }
 
     // initial preload attempt (non-blocking) and draw
     preloadAssets().then(() => drawBoard()).catch(() => drawBoard());

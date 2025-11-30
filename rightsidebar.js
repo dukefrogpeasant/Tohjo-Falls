@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <marquee behavior="scroll" direction="up" scrollamount="3" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!<br><br>
-                    Pokémon Legends Z-A has released, we've <a href="plza">made a page for it!</a>
-                    We reached over 1000 hits this month(october)!!
+                    Thank you for over 2k Hits! Merry christmas!<br><br>
                 </marquee>
             </div>
         </font>
@@ -34,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
             <a href="https://mewheart.neocities.org/">
                 <img src="./Visual/affiliateimg/others/mewheart.png" alt="MewHeart" border="0">
+            </a>
+            <a href="https://theorangeislands.tripod.com/">
+                <img src="./Visual/affiliateimg/others/toi.gif" alt="The Orange Islands" border="0">
             </a>
         </td>
         </tr></table>

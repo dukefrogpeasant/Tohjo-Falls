@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="pikachu.html">Virtual Pikachu</a><br>
         &nbsp;<a href="diglett.html">Diglett Bash</a><br>
         &nbsp;<a href="polls.html">Polls</a><br>
+        &nbsp;<a href="nostalgia.html">Nostalgia</a><br>
         &nbsp;<a href="archivedpages.html">Archived Pages</a><br>
         &nbsp;<a href="milestones.html">Milestones</a><br>
         </font>
@@ -101,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <font face="tahoma" size="2">
         &nbsp;<a href="buttonhelp.html">Buttons</a><br>
         &nbsp;<a href="bannershelp.html">Banners</a><br>
+        &nbsp;<a href="hosting.html">Hosting</a><br>
         &nbsp;<a href="layouts.html">Layouts</a><br>
         &nbsp;<a href="splashpics.html">Splash Pics</a><br>
         &nbsp;<a href="php.html">PHP Help</a><br>

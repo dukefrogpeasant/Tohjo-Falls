@@ -38,7 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="./Visual/affiliateimg/others/toi.gif" alt="The Orange Islands" border="0">
             </a>
         </td>
+        
         </tr></table>
+        <img src="./Visual/navbar/coolsites.png"><br>
+        <table width="139"><tr>
+        <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">
+        <font face="verdana" size="2">
+            <a href="http://www.ginomegelati.de">
+<img src="http://www.ginomegelati.de/basis/link/gg-button.jpg" alt="visit www.ginomegelati.de"></a>
+        </font>
+        </td></tr></table>
         <img src="./Visual/navbar/topsites.png"><br>
         <table width="139"><tr>
         <td width="139" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000; border-top: 1 solid #000000;" background="/web/20050207184020im_/http://tohjo.mybesthost.com/mbp.png">

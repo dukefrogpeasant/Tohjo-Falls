@@ -91,6 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="pikachu.html">Virtual Pikachu</a><br>
         &nbsp;<a href="diglett.html">Diglett Bash</a><br>
         &nbsp;<a href="polls.html">Polls</a><br>
+        &nbsp;<a href="diglett.html">Diglett Bash</a><br>
+        &nbsp;<a href="gameriddle.html">Riddles</a><br>
         &nbsp;<a href="nostalgia.html">Nostalgia</a><br>
         &nbsp;<a href="archivedpages.html">Archived Pages</a><br>
         &nbsp;<a href="milestones.html">Milestones</a><br>

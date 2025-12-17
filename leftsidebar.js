@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         &nbsp;<a href="frlg.html">FR/LG</a><br>
         &nbsp;<a href="emerald.html">Emerald</a><br>
         &nbsp;<a href="dp.html">Diamond/Pearl</a><br>
+        &nbsp;<a href="platinum.html">Platinum</a><br>
         &nbsp;<a href="dash.html">Dash</a><br>
         &nbsp;<a href="plza.html">Legends Z-A</a><br>
         </font>

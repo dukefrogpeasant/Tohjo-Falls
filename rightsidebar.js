@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="https://theorangeislands.tripod.com/">
                 <img src="./Visual/affiliateimg/others/toi.gif" alt="The Orange Islands" border="0">
             </a>
+            <a href="http://kyogreskingdom.neocities.org" title="Kyogre's Kingdom" target="_blank"><img src="./Visual/affiliateimg/others/kyokingdom.gif">
+            </a>
         </td>
         
         </tr></table>

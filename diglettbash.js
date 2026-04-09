@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
         assetLoadPromises.push(loadImage("Diglett/holeft.png").then(img => assets.gopherHurt[3] = img)); 
         assetLoadPromises.push(loadImage("Diglett/ss.jpg").then(img => assets.startStop = img)); //start stop button
         // sounds same as above adjust filetype if need be
-        assetLoadPromises.push(loadAudio("Diglett/sound/ow.mp3").then(a => assets.sounds.ouch = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/bang.mp3").then(a => assets.sounds.bang = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/gup.mp3").then(a => assets.sounds.gup = a));
+        assetLoadPromises.push(loadAudio("https://tohjo.nekoweb.org/diglettsound/ow.mp3").then(a => assets.sounds.ouch = a));
+        assetLoadPromises.push(loadAudio("https://tohjo.nekoweb.org/diglettsound/bang.mp3").then(a => assets.sounds.bang = a));
+        assetLoadPromises.push(loadAudio("https://tohjo.nekoweb.org/diglettsound/gup.mp3").then(a => assets.sounds.gup = a));
         assetLoadPromises.push(loadAudio("Diglett/sound/gdown.mp3").then(a => assets.sounds.gdown = a));
-        assetLoadPromises.push(loadAudio("Diglett/sound/laugh.mp3").then(a => assets.sounds.laugh = a));
+        assetLoadPromises.push(loadAudio("https://tohjo.nekoweb.org/diglettsound/laugh.mp3").then(a => assets.sounds.laugh = a));
 
         return Promise.all(assetLoadPromises).then(() => {
             imagesLoaded = !!(assets.hole || assets.gopherPics[0]);

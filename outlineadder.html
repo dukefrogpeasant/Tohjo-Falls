@@ -1,0 +1,171 @@
+<head>
+      <meta name="Description" content="Are you ready? Come to The Tohjo Falls!">
+<title>*The Tohjo Falls*</title>
+    <link rel="icon" type="image/x-icon" href="Visual/favicon/favacon.ico">
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+
+<style>
+  canvas {
+    margin-top: 20px;
+    background: #FFFFFF;
+  }
+</style>
+
+</style>
+</head>
+<body topmargin="5" leftmargin="0" rightmargin="0" bottommargin="2">
+
+  <table align="center" width="779" border="0" cellspacing="0" cellpadding="0">
+ 
+
+    <tr>
+      <td><img src="./Visual/header/banner.png"></td>
+    </tr>
+
+  </table>
+
+  <table width="779" align="center" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td bgcolor="#9C97EB" width="141" valign="top" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000;">
+                <div id="left-sidebar"></div>
+            </td>
+
+      <td align="left" background="/web/20030228113837im_/http://tf.pokemonsky.com/pics/ra2md_05.jpg" valign="top"
+        width="94%" bgcolor="#72A0D1">
+        <table border="0" cellpadding="0" cellspacing="6" width="100%">
+          <tbody>
+            <tr>
+              <td align="left" valign="top" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody>
+                    <tr>
+                      <td width="100%">
+                        <font color="black">
+
+
+
+
+
+
+                          <p align="right">
+                            <font size="6" face="Arial Rounded MT Bold, Comic Sans MS, Andy"><strong>Outline Adder tool tool</strong></font>
+<p>This tool adds a 1 pixel (1 PX) outline to your image at places where a non-fully transparent pixel (alpha not 0) hits a transparent pixel (alpha 0). This does NOT rescale the image, and is ran LOCALLY in your browser. You can pick the outline color by yourself!.</p>
+
+<input type="file" id="upload" accept="image/png">
+<input type="color" id="colorPicker" value="#000000">
+<button onclick="generateOutline()">Generate Outline</button>
+
+<br>
+<canvas id="canvas"></canvas>
+
+<script>
+let img = new Image();
+
+document.getElementById('upload').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  img.src = URL.createObjectURL(file);
+  img.onload = () => {
+    const canvas = document.getElementById('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
+  };
+});
+
+function generateOutline() {
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  if (!img.src) return;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0);
+
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  const width = canvas.width;
+  const height = canvas.height;
+
+  const outlineColor = hexToRgb(document.getElementById('colorPicker').value);
+
+  // Create new ImageData for outline
+  const outlineData = ctx.createImageData(width, height);
+  const odata = outlineData.data;
+
+  function getAlpha(x, y) {
+    if (x < 0 || y < 0 || x >= width || y >= height) return 0;
+    return data[(y * width + x) * 4 + 3];
+  }
+
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+
+      const index = (y * width + x) * 4;
+      const alpha = data[index + 3];
+
+      if (alpha === 0) {
+
+        // check neighboring pixels on if alphas are 0 or not how tf did i make this work
+        const neighbors =
+          getAlpha(x+1,y) > 0 ||
+          getAlpha(x-1,y) > 0 ||
+          getAlpha(x,y+1) > 0 ||
+          getAlpha(x,y-1) > 0;
+
+        if (neighbors) {
+          odata[index] = outlineColor.r;
+          odata[index+1] = outlineColor.g;
+          odata[index+2] = outlineColor.b;
+          odata[index+3] = 255;
+        }
+      }
+    }
+  }
+
+  // outline
+  ctx.putImageData(outlineData, 0, 0);
+
+  // makes the image
+  ctx.drawImage(img, 0, 0);
+}
+
+function hexToRgb(hex) {
+  const bigint = parseInt(hex.slice(1), 16);
+  return {
+    r: (bigint >> 16) & 255,
+    g: (bigint >> 8) & 255,
+    b: bigint & 255
+  };
+}
+</script>
+
+</font>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top" width="100%"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td bgcolor="#9C97EB" width="141" valign="top" style="border-left: 1 solid #000000" <div id="right-sidebar">
+                </div>
+            </td>
+
+        </tr>
+    </table>
+    <script src="./leftsidebar.js"></script>
+    <script src="./rightsidebar.js"></script>
+</body>
+</html>

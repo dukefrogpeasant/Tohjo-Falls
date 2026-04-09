@@ -1,13 +1,35 @@
-body {
-    scrollbar-arrow-color: #FFFFFF;
+ body {
+    scrollbarArrowColor: #FFFFFF;
     scrollbar-base-color: #9C97EB;
     scrollbar-face-color: #9C97EB;
     scrollbar-highlight-color: #FFFFFF;
     scrollbar-shadow-color: #000000;
-    /*scrollbar-3d-light-color: #000000; FIGURE OUT WHAT THIS DOES?*/
+    scrollbar-3d-light-color: #000000; FIGURE OUT WHAT THIS DOES?
     scrollbar-track-color: #9C97EBFF;
-    /*scrollbar-dark-shadow-color: #FFFFFF; FIGURE OUT WHAT THIS DOES?*/
+    scrollbar-dark-shadow-color: #FFFFFF; FIGURE OUT WHAT THIS DOES?
 }
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #9C97EB #FFFFFF;
+}
+
+/* For Chrome, Edge & Safari */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #9C97EB;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9C97EB;
+    border-radius: 20px;    
+    border: 3px solid #FFFFFF;
+}
+
 
 A:link {
     COLOR: #000000;

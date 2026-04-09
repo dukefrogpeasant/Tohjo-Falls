@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <marquee behavior="scroll" direction="up" scrollamount="3" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!<br><br>
-                    Thank you for over 2k Hits! Merry christmas!<br><br>
+                    THANK YOU FOR OVER 4000 HITS! Thank you a lot! :D
                 </marquee>
             </div>
         </font>
@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
             <a href="http://kyogreskingdom.neocities.org" title="Kyogre's Kingdom" target="_blank"><img src="./Visual/affiliateimg/others/kyokingdom.gif">
             </a>
+            <a href="https://wondermap.neocities.org/" title="WonderMap" target="_blank"><img src="./Visual/affiliateimg/others/wondrmap.png">
+            </a>
+            
         </td>
         
         </tr></table>
@@ -48,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <font face="verdana" size="2">
             <a href="http://www.ginomegelati.de">
 <img src="http://www.ginomegelati.de/basis/link/gg-button.jpg" alt="visit www.ginomegelati.de"></a>
+<a href="http://www.deoxys.space">
+<img src="https://deoxys.space/assets/deoxysbutton.png" alt="deoxys"></a>
         </font>
         </td></tr></table>
         <img src="./Visual/navbar/topsites.png"><br>

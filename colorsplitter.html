@@ -1,0 +1,176 @@
+<head>
+      <meta name="Description" content="Are you ready? Come to The Tohjo Falls!">
+<title>*The Tohjo Falls*</title>
+    <link rel="icon" type="image/x-icon" href="Visual/favicon/favacon.ico">
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+
+<style>
+  #layers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .layer {
+    background: #ABABAB;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  canvas {
+    image-rendering: pixelated;
+    background: transparent;
+  }
+</style>
+</head>
+<body topmargin="5" leftmargin="0" rightmargin="0" bottommargin="2">
+
+  <table align="center" width="779" border="0" cellspacing="0" cellpadding="0">
+    </head>
+
+    <tr>
+      <td><img src="./Visual/header/banner.png"></td>
+    </tr>
+
+  </table>
+
+  <table width="779" align="center" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td bgcolor="#9C97EB" width="141" valign="top" style="border-left: 1 solid #000000; border-bottom: 1 solid #000000; border-right: 1 solid #000000;">
+                <div id="left-sidebar"></div>
+            </td>
+
+      <td align="left" background="/web/20030228113837im_/http://tf.pokemonsky.com/pics/ra2md_05.jpg" valign="top"
+        width="94%" bgcolor="#72A0D1">
+        <table border="0" cellpadding="0" cellspacing="6" width="100%">
+          <tbody>
+            <tr>
+              <td align="left" valign="top" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody>
+                    <tr>
+                      <td width="100%">
+                        <font color="black">
+
+
+
+
+
+
+                          <p align="right">
+                            <font size="6" face="Arial Rounded MT Bold, Comic Sans MS, Andy"><strong>Color Split tool</strong></font>
+<p>This tool splits every single color in a image into separate layers. For rather obvious reasons, i'm not accepting jpegs. For now, this only accepts GIF and PNGs.</p>
+<input type="file" id="upload" accept="image/png,image/gif">
+<br><br>
+
+<div id="layers"></div>
+
+<script>
+const upload = document.getElementById('upload');
+const layersDiv = document.getElementById('layers');
+
+upload.addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const img = new Image();
+  img.src = URL.createObjectURL(file);
+
+  img.onload = () => {
+    splitColors(img);
+  };
+});
+
+function splitColors(img) {
+  layersDiv.innerHTML = "";
+
+  const tempCanvas = document.createElement('canvas');
+  const tempCtx = tempCanvas.getContext('2d');
+
+  tempCanvas.width = img.width;
+  tempCanvas.height = img.height;
+
+  tempCtx.drawImage(img, 0, 0);
+
+  const imageData = tempCtx.getImageData(0, 0, img.width, img.height);
+  const data = imageData.data;
+
+  const colorMap = new Map();
+
+  // collects each single color, except trans pixels
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const a = data[i + 3];
+
+    if (a === 0) continue;
+
+    const key = `${r},${g},${b},${a}`;
+    if (!colorMap.has(key)) {
+      colorMap.set(key, []);
+    }
+
+    colorMap.get(key).push(i);
+  }
+
+  // creates canvas and does label for layrcolors :3 hello if youre reading
+  colorMap.forEach((pixels, colorKey) => {
+    const [r, g, b, a] = colorKey.split(',').map(Number);
+
+    const layerCanvas = document.createElement('canvas');
+    layerCanvas.width = img.width;
+    layerCanvas.height = img.height;
+
+    const layerCtx = layerCanvas.getContext('2d');
+    const layerImageData = layerCtx.createImageData(img.width, img.height);
+    const layerData = layerImageData.data;
+
+    pixels.forEach(index => {
+      layerData[index] = r;
+      layerData[index + 1] = g;
+      layerData[index + 2] = b;
+      layerData[index + 3] = a;
+    });
+
+    layerCtx.putImageData(layerImageData, 0, 0);
+
+    const wrapper = document.createElement('div');
+    wrapper.className = "layer";
+
+    const label = document.createElement('div');
+    label.textContent = `Color:(R:${r}, G:${g}, B:${b}, Alpha:${a})`;
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(layerCanvas);
+
+    layersDiv.appendChild(wrapper);
+  });
+}
+</script>
+
+</center>
+                        </font>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" width="100%"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+                  <td bgcolor="#9C97EB" width="141" valign="top" style="border-left: 1 solid #000000"
+                <div id="right-sidebar"></div>
+            </td>
+
+    </tr>
+</table>
+    <script src="./leftsidebar.js"></script>
+    <script src="./rightsidebar.js"></script>
+</body>

@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
             <a href="https://viridianf.neocities.org/" title="Viridian Forties" target="_blank"><img src="./Visual/affiliateimg/others/viridian40s.png">
             </a>
+            <a href="https://neoposttown.neocities.org/" title="Neo Post Town" target="_blank"><img src="./Visual/affiliateimg/others/neopost.png">
+            </a>
             
         </td>
         

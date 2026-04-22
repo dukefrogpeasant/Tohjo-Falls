@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
             <a href="https://wondermap.neocities.org/" title="WonderMap" target="_blank"><img src="./Visual/affiliateimg/others/wondrmap.png">
             </a>
+            <a href="https://viridianf.neocities.org/" title="Viridian Forties" target="_blank"><img src="./Visual/affiliateimg/others/viridian40s.png">
+            </a>
             
         </td>
         

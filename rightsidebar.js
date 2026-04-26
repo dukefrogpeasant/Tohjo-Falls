@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="https://tohjo.neocities.org/">
                 <img src="./Visual/affiliateimg/myown/tfaffiliate.png" alt="The Tohjo Falls">
             </a><br>
-            <a href="http://angelfire.com/anime4/animefanime">
+            <a href="https://web.archive.org/web/20190725054129/http://www.angelfire.com/anime4/animefanime/">
                 <img src="./Visual/affiliateimg/others/animefanime.gif" alt="Anime Fanime" border="0">
             </a>
-            <a href="https://angelfire.com/pokemon2/pkmnjourney/linktous.html">
+            <a href="https://web.archive.org/web/20190806043959/http://www.angelfire.com/pokemon2/pkmnjourney/Main.html">
                 <img src="./Visual/affiliateimg/others/pokejourneyani.gif" alt="Pokejourney" border="0">
             </a>
             <a href="https://boxprophet.org/">
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="https://mewheart.neocities.org/">
                 <img src="./Visual/affiliateimg/others/mewheart.png" alt="MewHeart" border="0">
             </a>
-            <a href="https://theorangeislands.tripod.com/">
+            <a href="https://web.archive.org/web/20040729005550/http://theorangeislands.tripod.com/index2.html">
                 <img src="./Visual/affiliateimg/others/toi.gif" alt="The Orange Islands" border="0">
             </a>
             <a href="http://kyogreskingdom.neocities.org" title="Kyogre's Kingdom" target="_blank"><img src="./Visual/affiliateimg/others/kyokingdom.gif">

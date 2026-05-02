@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <marquee behavior="scroll" direction="up" scrollamount="3" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!<br><br>
-                    THANK YOU FOR OVER 4000 HITS! Thank you a lot! :D
+                    THANK YOU FOR OVER 5555 HITS! My birthday is in this month (May!)
                 </marquee>
             </div>
         </font>
@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
             <a href="https://neoposttown.neocities.org/" title="Neo Post Town" target="_blank"><img src="./Visual/affiliateimg/others/neopost.png">
             </a>
+            <a href="https://ecruteakforest.neocities.org/" title="Ecruteak Forest" target="_blank"><img src="./Visual/affiliateimg/others/ecruforest.png">
             
         </td>
         

@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <marquee behavior="scroll" direction="up" scrollamount="3" style="height: 200px;">
                     <a href="main.html">News & Updates</a><br>
                     Welcome to Tohjo Falls!<br><br>
-                    THANK YOU FOR OVER 5555 HITS!<br><br>
-                    Go and check the interview Raichu did out on Johto Times!
+                    7000 HITS! THANK YOU!
                 </marquee>
             </div>
         </font>
